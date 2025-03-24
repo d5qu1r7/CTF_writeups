@@ -3,54 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Basic HTML Site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        nav {
-            margin: 10px 0;
-        }
-        nav a {
-            margin: 0 10px;
-            color: #007BFF;
-            text-decoration: none;
-        }
-        main {
-            padding: 20px;
-            background-color: white;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #777;
-        }
-    </style>
+    <title>HackNotes | CTF Writeups</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My HTML Site</h1>
+    <div class="header-container">
+        <a href="#" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span>HackNotes</span>
+        </a>
+        <nav>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Writeups</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
+    </div>
     </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+
     <main>
-        <h2>Home</h2>
-        <p>This is a basic example of an HTML site structure. You can customize it to fit your needs!</p>
+    <section class="hero">
+        <h1>CTF Writeups & Security Notes</h1>
+        <p>Welcome to HackNotes - a collection of detailed CTF writeups, security research, and hacking techniques. Learn how to solve challenges, discover vulnerabilities, and improve your cybersecurity skills.</p>
+        <a href="#" class="hero-cta">Browse Writeups</a>
+    </section>
+
+    <section class="search-container">
+        <input type="text" class="search-input" placeholder="Search writeups, categories, or techniques...">
+        <span class="search-icon">🔍</span>
+    </section>
+
+    <section class="featured">
+        <h2 class="section-title">Featured Writeups</h2>
+        <div class="card-grid">
+        <div class="card">
+            <div class="card-img">🔐</div>
+            <div class="card-body">
+            <h3 class="card-title">Breaking ECDSA with Nonce Reuse</h3>
+            <div class="tag-list">
+                <span class="tag tag-crypto">Crypto</span>
+                <span class="tag">ECDSA</span>
+                <span class="tag">Medium</span>
+            </div>
+            <p class="card-text">In this writeup, I show how to exploit nonce reuse in ECDSA to recover private keys from a CTF challenge.</p>
+            <div class="meta">
+                <span class="meta-item"><i>👁️</i> 1.2k views</span>
+                <span class="meta-item"><i>🕒</i> Mar 15, 2025</span>
+            </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-img">🌐</div>
+            <div class="card-body">
+            <h3 class="card-title">Bypassing WAF with GraphQL Introspection</h3>
+            <div class="tag-list">
+                <span class="tag tag-web">Web</span>
+                <span class="tag">GraphQL</span>
+                <span class="tag">Hard</span>
+            </div>
+            <p class="card-text">Learn how I bypassed a WAF by leveraging GraphQL introspection to discover and exploit hidden endpoints.</p>
+            <div class="meta">
+                <span class="meta-item"><i>👁️</i> 875 views</span>
+                <span class="meta-item"><i>🕒</i> Mar 10, 2025</span>
+            </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-img">🔍</div>
+            <div class="card-body">
+            <h3 class="card-title">Reverse Engineering a Custom VM</h3>
+            <div class="tag-list">
+                <span class="tag tag-pwn">Reverse</span>
+                <span class="tag">VM</span>
+                <span class="tag">Expert</span>
+            </div>
+            <p class="card-text">Walkthrough of reverse engineering a custom virtual machine implementation and extracting the hidden flag.</p>
+            <div class="meta">
+                <span class="meta-item"><i>👁️</i> 642 views</span>
+                <span class="meta-item"><i>🕒</i> Mar 5, 2025</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="recent">
+        <h2 class="section-title">Recent Writeups</h2>
+        <div class="card-grid">
+        <div class="card">
+            <div class="card-img">💾</div>
+            <div class="card-body">
+            <h3 class="card-title">Recovering Deleted Files from NTFS</h3>
+            <div class="tag-list">
+                <span class="tag tag-forensics">Forensics</span>
+                <span class="tag">NTFS</span>
+                <span class="tag">Medium</span>
+            </div>
+            <p class="card-text">How I recovered the hidden flag from partially deleted NTFS files using MFT analysis.</p>
+            <div class="meta">
+                <span class="meta-item"><i>👁️</i> 423 views</span>
+                <span class="meta-item"><i>🕒</i> Mar 20, 2025</span>
+            </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-img">🔨</div>
+            <div class="card-body">
+            <h3 class="card-title">Exploiting Format String Vulnerabilities</h3>
+            <div class="tag-list">
+                <span class="tag tag-pwn">Pwn</span>
+                <span class="tag">Format String</span>
+                <span class="tag">Medium</span>
+            </div>
+            <p class="card-text">A detailed guide on exploiting format string vulnerabilities to achieve arbitrary write primitives.</p>
+            <div class="meta">
+                <span class="meta-item"><i>👁️</i> 356 views</span>
+                <span class="meta-item"><i>🕒</i> Mar 18, 2025</span>
+            </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-img">⚙️</div>
+            <div class="card-body">
+            <h3 class="card-title">Breaking JWT Authentication</h3>
+            <div class="tag-list">
+                <span class="tag tag-web">Web</span>
+                <span class="tag">JWT</span>
+                <span class="tag">Easy</span>
+            </div>
+            <p class="card-text">How I exploited weak JWT implementation to gain admin access in a recent CTF challenge.</p>
+            <div class="meta">
+                <span class="meta-item"><i>👁️</i> 512 views</span>
+                <span class="meta-item"><i>🕒</i> Mar 17, 2025</span>
+            </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-img">🧩</div>
+            <div class="card-body">
+            <h3 class="card-title">Solving Complex Crypto Challenges</h3>
+            <div class="tag-list">
+                <span class="tag tag-crypto">Crypto</span>
+                <span class="tag">RSA</span>
+                <span class="tag">Hard</span>
+            </div>
+            <p class="card-text">Walkthrough of a multi-stage cryptography challenge involving RSA, AES, and custom encodings.</p>
+            <div class="meta">
+                <span class="meta-item"><i>👁️</i> 398 views</span>
+                <span class="meta-item"><i>🕒</i> Mar 12, 2025</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 My HTML Site</p>
+    <div class="footer-content">
+        <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Writeups</a>
+        <a href="#">Categories</a>
+        <a href="#">About</a>
+        <a href="#">Privacy Policy</a>
+        </div>
+        <div class="copyright">
+        © 2025 HackNotes | All CTF writeups and security content
+        </div>
+    </div>
     </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
